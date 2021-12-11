@@ -448,11 +448,27 @@ form input {
         justify-content: flex-start;
     }
 
-    /* Accomodation */
+    /* Accomodation section */
 
     .accomodation__list,
     .accomodation__popular {
         border-radius: 0px;
         padding: 22px 3% 0px 3%;
+    }
+
+    /* Main accomodation list */
+    .card__wrap--inner, 
+    .card__wrap--inner--popular {
+        width: 100%;
+    }
+
+    /* Card popular accomodation */
+
+    .card__accomodation--popular {
+    flex-direction: row;
+    column-gap: none;
+    }
+    .hotel__picture--popular {
+    min-width: 38%;
     }
 }

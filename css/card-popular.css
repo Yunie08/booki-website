@@ -22,14 +22,12 @@
 
 .hotel__picture--popular {
   display: flex;
-  max-width: 127px;
   width: 38.138%;
   height: 135px;
 }
 
 img.hotel__pic {
   object-fit: cover;
-  max-width: 127px;
   width: 100%;
 }
 
@@ -39,7 +37,7 @@ img.hotel__pic {
   justify-content: space-between;
   height: 100%;
   width: 61.86%;
-  padding: 12.5px 11px 10px 11px;
+  padding: 12.5px 11px 10px 9px;
 }
 
 .card__accomodation__stars--popular {
