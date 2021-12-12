@@ -8,6 +8,7 @@
     --color-neutral: #F2F2F2;
     --form-border-radius: 15px;
     --filter-size: 50px;
+    --padding-mobile: 5%;
 }
 
 /* Base */
@@ -73,9 +74,11 @@ i {
 
 
 .main__wrapper,
-.header__footer__wrapper {
+.header__wrapper,
+.footer__wrapper {
     width: 95%;
     max-width: 1340px;
+    margin: 0 auto;
 }
 
 .main__wrapper {
@@ -384,7 +387,34 @@ form input {
     padding: 20px 12px 20px 19px;
 }
 
+/********** Footer **********/
+footer {
+    background: var(--color-neutral);
+    width: 100%;
+    padding: 40px 0;
+}
 
+.footer__wrapper,
+.footer__wrapper--inner {
+    display: flex;
+}
+
+.footer__wrapper--inner {
+    width: 100%;
+    max-width: 1020px;
+    justify-content: space-between;
+}
+
+footer p {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+footer li {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 15px 0;
+}
 
 /********** Media queries **********/
 @media screen and (max-width : 991px) {
@@ -444,6 +474,7 @@ form input {
     /* Activities */
     .activities .card__wrap--outer {
         flex-wrap: wrap;
+        column-gap: 0px;
     }
 
     .activities>.card__wrap--outer>*:nth-child(3) {
@@ -453,17 +484,23 @@ form input {
         width: 50%;
         max-width: calc(50% - 20px);
     }
+
+    /* Footer */
+    
 }
 @media screen and (max-width : 767px) {
 
     /* General */
 
-    .header__footer__wrapper {
+    .header__wrapper {
         width: 100%;
     }
-    .main__wrapper {
+    .main__wrapper,
+    .footer__wrapper {
         width: 100%;
     }
+
+
 
 
 
@@ -507,7 +544,7 @@ form input {
 
     /* Form */
     .search__section {
-        padding: 0 3%;
+        padding: 0 var(--padding-mobile);
     }
 
     .form__container {
@@ -539,7 +576,7 @@ form input {
     .accomodation__list,
     .accomodation__popular {
         border-radius: 0px;
-        padding: 22px 3% 0px 3%;
+        padding: 22px var(--padding-mobile) 0px var(--padding-mobile);
     }
 
     .card__wrap--outer {
@@ -560,5 +597,37 @@ form input {
     }
     .hotel__picture--popular {
     min-width: 38%;
+    }
+
+    /* Activities */
+
+    .activities {
+        padding: 0 var(--padding-mobile);
+    }
+
+    .activities>.card__wrap--outer>*:nth-child(3) {
+        order: 3;
+    }
+    .activities>.card__wrap--outer>*:nth-child(4) {
+        order: 4;
+    }
+    .column__wrap {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        row-gap: 10px;
+    }
+
+    .activities .card {
+        height: 190px;
+    }
+
+    /* Footer */
+    .footer__wrapper--inner {
+        flex-direction: column;
+        row-gap: 15px;
+    }
+    .footer__wrapper {
+        padding: 0 var(--padding-mobile);
     }
 }
