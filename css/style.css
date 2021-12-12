@@ -453,7 +453,7 @@ footer li {
       }
     .card__accomodation--popular {
         flex-direction: column;
-        column-gap: none;
+        column-gap: 0;
     }
     .hotel__picture--popular {
         height: 114px;
@@ -468,7 +468,6 @@ footer li {
         width: 100%;
         height: 100%;
         padding: 12.5px 11px 6px 11px;
-        justify-content: none;
     }
 
     /* Activities */
@@ -593,7 +592,7 @@ footer li {
 
     .card__accomodation--popular {
     flex-direction: row;
-    column-gap: none;
+    column-gap: 0;
     }
     .hotel__picture--popular {
     min-width: 38%;
