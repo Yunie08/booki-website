@@ -61,6 +61,8 @@ a:focus {
     outline: var(--color-primary) 2px solid;
 }
 
+
+
 button,
 input {
     font-family: inherit;
@@ -415,6 +417,9 @@ footer li {
     font-weight: 500;
     margin: 15px 0;
 }
+footer a:hover {
+    color: var(--color-primary);
+}
 
 /********** Media queries **********/
 @media screen and (max-width : 991px) {
@@ -483,8 +488,6 @@ footer li {
         width: 50%;
         max-width: calc(50% - 20px);
     }
-
-    /* Footer */
     
 }
 @media screen and (max-width : 767px) {
@@ -498,10 +501,6 @@ footer li {
     .footer__wrapper {
         width: 100%;
     }
-
-
-
-
 
     /* Header */
     header {
@@ -537,7 +536,7 @@ footer li {
     }
     
     header a:hover {
-        border-top: none;
+        border-top: 3px solid transparent;
         border-bottom: 3px var(--color-primary) solid ;
     }
 
