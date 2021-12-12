@@ -257,7 +257,7 @@ form input {
 /********** Accomodation **********/
 .accomodation {
     display: flex;
-    margin-top: 35px;
+    margin: 35px 0 55px 0;
     justify-content: space-between;
 }
 .accomodation__list,
@@ -311,6 +311,81 @@ form input {
 }
 
 
+/********** Activities section **********/
+
+.activities .card__wrap--outer {
+    column-gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.column__card,
+.column__wrap,
+.row__card__left--bottom,
+.row__card__left--top,
+.row__card__right--bottom,
+.row__card__right--top {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.column__card,
+.row__card__left--bottom,
+.row__card__left--top,
+.row__card__right--bottom,
+.row__card__right--top {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.column__wrap {
+    width: 25%;
+    max-width: 302px;
+    height: 445px;
+    row-gap: 30px;
+    
+}
+
+.column__card {
+    height: 100%;
+}
+
+.row__card__left--top {
+    height: 60%;
+}
+
+.row__card__left--bottom {
+    height: 40%;
+}
+
+.row__card__right--top {
+    height: 48%;
+}
+
+.row__card__right--bottom {
+    height: 52%;
+}
+.activities img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.card__image {
+    overflow: hidden;
+    height: calc(100% - 56px);
+}
+
+.card__title {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 20px 12px 20px 19px;
+}
+
+
+
 /********** Media queries **********/
 @media screen and (max-width : 991px) {
     .search__filters {
@@ -347,26 +422,37 @@ form input {
         width: 31%;
       }
     .card__accomodation--popular {
-    flex-direction: column;
-    column-gap: none;
+        flex-direction: column;
+        column-gap: none;
     }
     .hotel__picture--popular {
-    height: 114px;
-    min-width: 100%;
+        height: 114px;
+        min-width: 100%;
     }
     img.hotel__pic {
-    display: block;
-    object-fit: cover;
-    min-width: 100%;
+        display: block;
+        object-fit: cover;
+        min-width: 100%;
     }
     .card__text__container--popular {
-    width: 100%;
-    height: 100%;
-    padding: 12.5px 11px 6px 11px;
-    justify-content: none;
+        width: 100%;
+        height: 100%;
+        padding: 12.5px 11px 6px 11px;
+        justify-content: none;
     }
-    
 
+    /* Activities */
+    .activities .card__wrap--outer {
+        flex-wrap: wrap;
+    }
+
+    .activities>.card__wrap--outer>*:nth-child(3) {
+        order: 4;
+    }
+    .column__wrap {
+        width: 50%;
+        max-width: calc(50% - 20px);
+    }
 }
 @media screen and (max-width : 767px) {
 
@@ -454,6 +540,10 @@ form input {
     .accomodation__popular {
         border-radius: 0px;
         padding: 22px 3% 0px 3%;
+    }
+
+    .card__wrap--outer {
+        row-gap: 10px;
     }
 
     /* Main accomodation list */
