@@ -173,6 +173,17 @@ form input {
     flex-grow: 2;
 }
 
+.form__text::placeholder {
+    font-weight: 500;
+}
+
+.form__text:hover {
+    cursor: text;
+}
+
+
+
+
 .form__btn {
     padding: 17.5px;
     color: #fff;                
