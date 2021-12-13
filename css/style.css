@@ -181,9 +181,6 @@ form input {
     cursor: text;
 }
 
-
-
-
 .form__btn {
     padding: 17.5px;
     color: #fff;                
@@ -273,7 +270,7 @@ form input {
 /********** Accomodation **********/
 .accomodation {
     display: flex;
-    margin: 35px 0 55px 0;
+    margin: 35px 0;
     justify-content: space-between;
 }
 .accomodation__list,
@@ -328,7 +325,9 @@ form input {
 
 
 /********** Activities section **********/
-
+.activities {
+    padding-top: 20px;
+}
 .activities .card__wrap--outer {
     column-gap: 20px;
     flex-wrap: nowrap;
