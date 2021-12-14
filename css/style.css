@@ -276,11 +276,14 @@ form input {
 .accomodation__popular {
     background: var(--color-neutral);
     border-radius: 16px;
-    padding: 22px 2% 10px 2%;
+    padding: 22px 2%;
 }
 
 .accomodation__list {
     width: 66.6666%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .accomodation__popular {
@@ -288,6 +291,7 @@ form input {
 }
 
 /* Accomodation - list */
+
 .card__accomodation img {
     height: 114px;
 }
@@ -321,6 +325,7 @@ form input {
 
 
 /* Accomodation - popular */
+
 .accomodation__popular__title {
     display: flex;
     justify-content: space-between;
@@ -410,7 +415,6 @@ img.hotel__pic {
     flex-direction: column;
     position: relative;
 }
-
 
 .column__wrap {
     width: 25%;
