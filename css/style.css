@@ -3,8 +3,8 @@
     --color-primary: #0065FC;
     --color-secondary: #DEEBFF;
     --color-neutral: #F2F2F2;
-    --form-border-radius: 15px;
-    --filter-size: 50px;
+    --form-border-radius: 12px;
+    --filter-size: 40px;
     --padding-mobile: 5%;
     --page-max-width: 1340px;
 }
@@ -12,7 +12,8 @@
 /* Base */
 
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Opera/IE 8+ */
+
     margin: 0;
     padding: 0;
 }
@@ -20,7 +21,7 @@
 body {
     font-family: 'Raleway', Arial, sans-serif;
     color: #000;
-    font-size: 16px;
+    font-size: 12.8px;
     font-weight: 500;
     display: flex;
     flex-direction: column;
@@ -33,13 +34,13 @@ p {
 }
 
 h1, h2 {
-    font-size: 21.5px;
+    font-size: 16.8px;
     font-weight: 700;
     margin: 10px 0;
 }
 
 h3 {
-    font-size: 16px;
+    font-size: 12.8px;
     font-weight: 700;
 
 }
@@ -82,19 +83,19 @@ header {
 }
 
 header img {
-    height: 64px; /* Logo's height approximately twice nav link's font size */
+    height: 51px; /* Logo's height approximately twice nav link's font size */
     position: relative;
-    top: -11.4px; /* Calculated to compensate upper margin of .png file after resize */
+    top: -10px; /* Calculated to compensate upper margin of .png file after resize */
     left: 15px;
 }
 
 header ul {
     display: flex;
-    gap: 32.5px;
+    gap: 20px;
 }
 
 header a {
-    padding: 48px 25px 0px 25px; /* top padding = (header top-padding) - (link border-top thickness - 1)  */
+    padding: 48px 15px 0px 15px; /* top padding = (header top-padding) - (link border-top thickness - 1)  */
     border-top: 3px transparent solid;
 }
 
@@ -128,22 +129,23 @@ form {
 }
 
 .form__container {
-    width: 420px;
-    height: 50px;
+    width: 33%;
+    min-width: 311px;
+    height: 40px;
     display: flex;
     border-radius: var(--form-border-radius);
-    font-size: 17px;
+    font-size: 13.6px;
 }
 
 .form__container * {
     display: block;
     font-weight: 700;
-    font-size: 17px;
+    font-size: 13.6px;
 }
 
 .form__label {
     background: var(--color-neutral);
-    padding: 0 20px 0 20px;
+    min-width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,7 +159,7 @@ form input {
 
 .form__text {        
     min-width: 56%;
-    padding-left: 17.5px;
+    padding-left: 10px;
     border-top: 1px solid var(--color-neutral);
     border-bottom: 1px solid var(--color-neutral);
     border-left: 1px solid transparent;
@@ -177,7 +179,7 @@ form input {
 }
 
 .form__btn {
-    padding: 17.5px;
+    padding: 12px;
     color: #fff;                
     background-color: var(--color-primary);
     border-radius: 0 var(--form-border-radius) var(--form-border-radius) 0;
@@ -206,17 +208,17 @@ form input {
     display: flex;
     align-items: center;
     font-weight: 700;
-    font-size: 17px;
+    font-size: 13.6px;
 }
 
 .search__filters {
-    column-gap: 32px;
+    column-gap: 25px;
     margin: 30px 0;
 }
 
 .search__filters__list {
     flex-wrap: wrap;
-    column-gap: 24px;
+    column-gap: 15px;
 }
 
 .search__filters__list a {
@@ -240,7 +242,7 @@ form input {
 }
 
 .search__filters__list p {
-    padding: 0 20px 0px 13px;
+    padding: 0 13px 0px 10px;
 }
 
 .search__filters__list a:hover > i {
@@ -310,7 +312,7 @@ form input {
 
 .show__more {
     display: block;
-    font-size: 17px;
+    font-size: 13.6px;
     font-weight: 700;
     margin: 20px 0;
 }
@@ -330,7 +332,7 @@ form input {
 }
 
 .accomodation__popular__title i {
-    font-size: 21px;
+    font-size: 16.8px;
 }
 
 .card__wrap--outer {
@@ -483,12 +485,12 @@ footer {
 }
 
 footer p {
-    font-size: 17px;
+    font-size: 13.6px;
     font-weight: 700;
 }
 
 footer li {
-    font-size: 16px;
+    font-size: 12.8px;
     font-weight: 500;
     margin: 15px 0;
 }
@@ -512,7 +514,7 @@ footer a:hover {
 
     .search__filters__list p {
         padding: 0 15px 0px 10px;
-        font-size: 16px;
+        font-size: 12.8px;
     }
 
     /* Accomodation section */
