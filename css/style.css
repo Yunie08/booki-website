@@ -13,15 +13,15 @@
 
 * {
     box-sizing: border-box; /* Opera/IE 8+ */
-
     margin: 0;
     padding: 0;
+    font-size: 11px;
 }
 
 body {
     font-family: 'Raleway', Arial, sans-serif;
     color: #000;
-    font-size: 12.8px;
+    font-size: 100%;
     font-weight: 500;
     display: flex;
     flex-direction: column;
@@ -34,13 +34,13 @@ p {
 }
 
 h1, h2 {
-    font-size: 16.8px;
+    font-size: 134.375%;
     font-weight: 700;
     margin: 10px 0;
 }
 
 h3 {
-    font-size: 12.8px;
+    font-size: 100%;
     font-weight: 700;
 
 }
@@ -134,13 +134,11 @@ form {
     height: 40px;
     display: flex;
     border-radius: var(--form-border-radius);
-    font-size: 13.6px;
 }
 
 .form__container * {
     display: block;
     font-weight: 700;
-    font-size: 13.6px;
 }
 
 .form__label {
@@ -150,6 +148,12 @@ form {
     justify-content: center;
     align-items: center;
     border-radius: var(--form-border-radius) 0 0 var(--form-border-radius);
+}
+
+.form__label,
+form input,
+button span {
+    font-size: 106.25%;
 }
 
 form input {
@@ -207,13 +211,12 @@ form input {
 .search__filters__list a {
     display: flex;
     align-items: center;
-    font-weight: 700;
-    font-size: 13.6px;
 }
 
 .search__filters {
     column-gap: 25px;
     margin: 30px 0;
+    width: 70%;
 }
 
 .search__filters__list {
@@ -229,7 +232,6 @@ form input {
 }
 
 .search__filters__list i {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -239,6 +241,12 @@ form input {
     border-radius: 50%;
     color: var(--color-primary);
     margin-left: -2px; /* negative margin  */
+    font-size: 106.25%;
+}
+
+.search__filters p {
+    font-weight: 700;
+    font-size: 106.25%;
 }
 
 .search__filters__list p {
@@ -312,7 +320,7 @@ form input {
 
 .show__more {
     display: block;
-    font-size: 13.6px;
+    font-size: 106.25%;
     font-weight: 700;
     margin: 20px 0;
 }
@@ -332,7 +340,7 @@ form input {
 }
 
 .accomodation__popular__title i {
-    font-size: 16.8px;
+    font-size: 134.375%;
 }
 
 .card__wrap--outer {
@@ -485,12 +493,12 @@ footer {
 }
 
 footer p {
-    font-size: 13.6px;
+    font-size: 106.25%;
     font-weight: 700;
 }
 
 footer li {
-    font-size: 12.8px;
+    font-size: 100%;
     font-weight: 500;
     margin: 15px 0;
 }
@@ -500,9 +508,17 @@ footer a:hover {
 
 /********** Media queries **********/
 @media screen and (max-width : 991px) {
+    :root {
+        --filter-size: 50px; 
+    }
+    * {
+        font-size: 16px;
+    }
+    
     .search__filters {
         flex-direction: column;
         align-items: flex-start;
+        width: 100%;
     }
 
     .search__filters__list {
@@ -514,7 +530,7 @@ footer a:hover {
 
     .search__filters__list p {
         padding: 0 15px 0px 10px;
-        font-size: 12.8px;
+        font-size: 100%;
     }
 
     /* Accomodation section */
