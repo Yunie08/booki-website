@@ -12,11 +12,10 @@
 /* Base */
 
 * {
-    box-sizing: border-box; /* Opera/IE 8+ */
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: calc(8px + 0.3vw);
-    /* font-size: 12px; */
+    font-size: 12px;
 }
 
 body {
@@ -81,7 +80,7 @@ header {
     max-width: var(--page-max-width);
     margin: 0 auto;
     padding-top: 50px; 
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -314,7 +313,7 @@ form input {
 
 .hotel__picture {
     width: 100%;
-    height: calc(45px + 4vw);
+    height: 85px;
 }
 
 .card__accomodation img {
@@ -395,7 +394,7 @@ form input {
 
 .hotel__picture--popular {
   width: 38.138%;
-  height: calc(65px + 4vw);
+  height: 100px;
 }
 
 img.hotel__pic {
@@ -441,8 +440,7 @@ img.hotel__pic {
 .column__wrap {
     width: 25%;
     max-width: 302px;
-    min-height: 300px;
-    height: calc(210px + 12vw);
+    height: 300px;
     row-gap: 20px; 
 }
 
@@ -568,7 +566,7 @@ footer a:hover {
         background: #fff;
     }
     .hotel__picture {
-        height: calc(70px + 4vw);
+        height: 100px;
         min-width: 100%;
     }
 
@@ -583,7 +581,7 @@ footer a:hover {
         column-gap: 0;
     }
     .hotel__picture--popular {
-        height: calc(70px + 4vw);
+        height: 100px;
         min-width: 100%;
     }
     .accomodation__popular h3 {
@@ -736,7 +734,7 @@ footer a:hover {
     }
 
     .hotel__picture {
-        height: calc(90px + 4vw);
+        height: 125px;
         min-width: 100%;
     }
 
@@ -745,7 +743,7 @@ footer a:hover {
     .card__accomodation--popular {
         flex-direction: row;
         column-gap: 0;
-        height: calc(120px + 4vw);
+        height: 125px;
     }
     .hotel__picture--popular {
         min-width: 38%;
