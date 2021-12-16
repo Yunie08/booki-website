@@ -15,7 +15,8 @@
     box-sizing: border-box; /* Opera/IE 8+ */
     margin: 0;
     padding: 0;
-    font-size: 11px;
+    /* font-size: calc(8px + 0.3vw) ; */
+    font-size: 12px;
 }
 
 body {
@@ -65,6 +66,10 @@ i {
     display: inline-block;
 }
 
+strong {
+    font-size: inherit;
+}
+
 /********** Header **********/
 
 header {
@@ -107,7 +112,7 @@ header a:hover {
 /********** Main **********/
 
 .main__wrapper {
-    width: 95%;
+    width: 94%;
     max-width: var(--page-max-width);
     margin: 0 auto;
     margin: 0;
@@ -216,11 +221,11 @@ form input {
 .search__filters {
     column-gap: 25px;
     margin: 30px 0;
-    width: 70%;
+    width: 75%;
 }
 
 .search__filters__list {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     column-gap: 15px;
 }
 
@@ -263,8 +268,17 @@ form input {
     transition: all ease 200ms;
 }
 
+.search__results {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.fa-stack {
+    align-self: flex-start;
+}
 .search__results .fa-info {
     color: var(--color-primary);
+    font-size: 12px;
 }
 
 .search__results .fa-circle {
@@ -284,22 +298,28 @@ form input {
 .accomodation__popular {
     background: var(--color-neutral);
     border-radius: 16px;
-    padding: 22px 2% 10px 2%;
+    padding: 22px 2% 22px 2%;
 }
 
 .accomodation__list {
-    width: 64.6667%;
+    width: 66.667%;
     position: relative;
 }
 
 .accomodation__popular {
-    width: 32.3333%;
+    width: 33.333%;
 }
 
 /* Accomodation - list */
 
+.hotel__picture {
+    width: 100%;
+    height: calc(45px + 4vw);
+}
+
 .card__accomodation img {
-    height: 114px;
+    height: 100%;
+    width: 100%;
 }
 
 .card__accomodation h3 {
@@ -311,11 +331,11 @@ form input {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    padding: 12.5px 11px 6px 11px;
+    padding: 11px 11px 6px 11px;
 }
 
 .card__accomodation p {
-    margin-top: 4px;
+    margin: 2px 0 4px 0;
 }
 
 .show__more {
@@ -350,11 +370,11 @@ form input {
     justify-content: space-between;
     flex-wrap: wrap;
     column-gap: 10px;
-    row-gap: 30px;
+    row-gap: 25px;
 }
 
 .accomodation__popular .card__wrap--outer {
-    margin: 13px 0 43px 0;
+    margin: 13px 0 10px 0;
 }
 
 .card__accomodation--popular,
@@ -370,17 +390,12 @@ form input {
 .card__accomodation--popular {
   flex-direction: row;
   column-gap: 3%;
-  border-radius: 20px;
-  overflow: hidden;
-  border: 5px solid #fff;
-  background: #fff;
   width: 100%;
 }
 
 .hotel__picture--popular {
-  display: flex;
   width: 38.138%;
-  height: 135px;
+  height: calc(65px + 4vw);
 }
 
 img.hotel__pic {
@@ -391,14 +406,13 @@ img.hotel__pic {
 .card__text__container--popular {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
   width: 61.86%;
-  padding: 12.5px 11px 10px 9px;
+  padding: 12.5px 13px 10px 5px;
 }
 
-.card__accomodation__stars--popular {
-  justify-self: flex-end;
+.accomodation__popular .card__stars {
+  margin-top: auto;
 }
 
 
@@ -427,8 +441,9 @@ img.hotel__pic {
 .column__wrap {
     width: 25%;
     max-width: 302px;
-    height: 445px;
-    row-gap: 30px; 
+    min-height: 300px;
+    height: calc(210px + 12vw);
+    row-gap: 20px; 
 }
 
 .column__card {
@@ -458,14 +473,14 @@ img.hotel__pic {
 
 .card__image {
     overflow: hidden;
-    height: calc(100% - 56px);
+    height: 100%;
 }
 
 .card__title {
-    min-height: 50px;
+    min-height: 40px;
     display: flex;
     align-items: center;
-    padding: 20px 12px 20px 19px;
+    padding: 15px 12px 15px 19px;
 }
 
 /********** Footer **********/
@@ -487,8 +502,8 @@ footer {
 }
 
 .footer__wrapper--inner {
-    width: 100%;
-    max-width: 1020px;
+    width: 75%;
+    /* max-width: 750px; */
     justify-content: space-between;
 }
 
@@ -512,7 +527,12 @@ footer a:hover {
         --filter-size: 50px; 
     }
     * {
-        font-size: 16px;
+        font-size: 14px;
+    }
+
+    .form__container {
+        width: 33%;
+        min-width: 370px;
     }
     
     .search__filters {
@@ -523,9 +543,7 @@ footer a:hover {
 
     .search__filters__list {
         gap: 13px 10px;
-        justify-content: space-between;
         width: 100%;
-        max-width: 780px;
     }
 
     .search__filters__list p {
@@ -533,9 +551,14 @@ footer a:hover {
         font-size: 100%;
     }
 
+    .card__accomodation,
+    .card__accomodation--popular {
+        border-width: 5px;
+    }
     /* Accomodation section */
     .accomodation {
         flex-direction: column-reverse;
+        margin-bottom: 0;
     }
     .accomodation__list,
     .accomodation__popular {
@@ -544,6 +567,12 @@ footer a:hover {
     .accomodation__list {
         background: #fff;
     }
+    .hotel__picture {
+        height: calc(70px + 4vw);
+        min-width: 100%;
+    }
+
+
 
     /* Card popular accomodation */
     .card__wrap--inner--popular {
@@ -554,9 +583,19 @@ footer a:hover {
         column-gap: 0;
     }
     .hotel__picture--popular {
-        height: 114px;
+        height: calc(70px + 4vw);
         min-width: 100%;
     }
+    .accomodation__popular h3 {
+        margin-bottom: 4px;
+    }
+    .accomodation__popular p {
+        margin-top: auto;
+    }
+    .accomodation__popular .card__stars {
+        margin-top: 0;
+    }
+
     img.hotel__pic {
         display: block;
         object-fit: cover;
@@ -564,11 +603,16 @@ footer a:hover {
     }
     .card__text__container--popular {
         width: 100%;
-        height: 100%;
-        padding: 12.5px 11px 6px 11px;
+        /* padding: 12.5px 11px 6px 11px; */
     }
 
+
     /* Activities */
+
+    .activities {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
     .activities .card__wrap--outer {
         flex-wrap: wrap;
         column-gap: 0px;
@@ -579,14 +623,22 @@ footer a:hover {
     }
     .column__wrap {
         width: 50%;
-        max-width: calc(50% - 20px);
+        max-width: calc(50% - 10px);
+        height: 400px;
+    }
+
+    /* Footer */
+    .footer__wrapper--inner {
+        width: 100%;
     }
     
 }
 @media screen and (max-width : 767px) {
 
     /* General */
-
+    * {
+        font-size: 16px;
+    }
     .main__wrapper,
     .footer__wrapper {
         width: 100%;
@@ -604,7 +656,7 @@ footer a:hover {
 
     header img {
         top: 0px;
-        left: 25px; /* half the right margin of .png image after resize*/
+        left: 19.5px; /* half the right margin of .png image after resize*/
     }
 
     header nav,
@@ -639,6 +691,7 @@ footer a:hover {
 
     .form__container {
         width: 100%;
+        min-width: 100%;
     }
 
     .form__btn {
@@ -657,21 +710,24 @@ footer a:hover {
     .search__filters {
         row-gap: 10px;
     }
+
     .search__filters__list {
         justify-content: flex-start;
+        flex-wrap: wrap;
     }
 
     /* Accomodation section */
-
+    
     .accomodation__list,
     .accomodation__popular {
         border-radius: 0px;
-        padding: 22px var(--padding-mobile) 0px var(--padding-mobile);
+        padding: 22px var(--padding-mobile) 25px var(--padding-mobile);
     }
 
     .card__wrap--outer {
         row-gap: 10px;
     }
+
 
     /* Main accomodation list */
     .card__wrap--inner, 
@@ -679,14 +735,34 @@ footer a:hover {
         width: 100%;
     }
 
+    .hotel__picture {
+        height: calc(90px + 4vw);
+        min-width: 100%;
+    }
+
     /* Card popular accomodation */
 
     .card__accomodation--popular {
-    flex-direction: row;
-    column-gap: 0;
+        flex-direction: row;
+        column-gap: 0;
+        height: calc(120px + 4vw);
     }
     .hotel__picture--popular {
-    min-width: 38%;
+        min-width: 38%;
+        height: 100%;
+    }
+
+    .accomodation__popular h3 {
+        margin-bottom: 4px;
+    }
+    .accomodation__popular p {
+        margin-top: 0;
+    }
+    .accomodation__popular .card__stars {
+        margin-top: auto;
+    }
+    .card__text__container--popular {
+        padding-left: 12px;
     }
 
     /* Activities */
@@ -701,11 +777,15 @@ footer a:hover {
     .activities>.card__wrap--outer>*:nth-child(4) {
         order: 4;
     }
+    .activities .card__wrap--outer {
+        row-gap: 15px;
+    }
     .column__wrap {
         width: 100%;
         max-width: 100%;
-        height: auto;
         row-gap: 10px;
+        height: auto;
+        min-height: 100%;
     }
 
     .activities .card {
@@ -721,6 +801,6 @@ footer a:hover {
 
     .footer__wrapper--inner {
         flex-direction: column;
-        row-gap: 15px;
+        row-gap: 10px;
     }
 }

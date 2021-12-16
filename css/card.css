@@ -8,13 +8,17 @@
   width: 31%
 }
 
-.card__accomodation {
-  flex-direction: column;
-  border-radius: 20px;
+.card__accomodation,
+.card__accomodation--popular {
+  border-radius: 15px;
   overflow: hidden;
-  border: 5px solid #fff;
+  border: 3px solid #fff;
   background: #fff;
   width: 100%;
+}
+
+.card__accomodation {
+  flex-direction: column;
 }
 
 .card {
@@ -38,7 +42,7 @@
 
 .fa-star {
   color: var(--color-primary);
-  font-size: 90%;
+  font-size: 75%;
   margin-right: 1px;
 }
 
