@@ -277,7 +277,7 @@ form input {
 }
 .search__results .fa-info {
     color: var(--color-primary);
-    font-size: 12px;
+    font-size: inherit;
 }
 
 .search__results .fa-circle {
