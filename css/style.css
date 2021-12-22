@@ -520,6 +520,8 @@ footer a:hover {
 }
 
 /********** Media queries **********/
+
+/***** Tablet and below ******/
 @media screen and (max-width : 991px) {
     :root {
         --filter-size: 50px; 
@@ -631,6 +633,7 @@ footer a:hover {
     }
     
 }
+/***** Mobile only ******/
 @media screen and (max-width : 767px) {
 
     /* General */
