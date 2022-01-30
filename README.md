@@ -26,8 +26,8 @@ Site URL: [Booki website](https://yunie08.github.io/booki-website/)
 
 ### Evaluated skills
 
-:heavy_check_mark:  Implementing a responsive UI
-:heavy_check_mark:  Integrating content based on a mockup
+:heavy_check_mark:  Implementing a responsive UI  
+:heavy_check_mark:  Integrating content based on a mockup  
 
 
 ## Specifications
@@ -41,7 +41,7 @@ This website interface follows the specifications given in a creative brief and 
 
 ### Technologies
 
-:heavy_check_mark:  __Allowed:__ HTML5, plain CSS 
+:heavy_check_mark:  __Allowed:__ HTML5, plain CSS  
 :x: __Forbidden:__ Javascript, inline CSS, any framework  
 
 
