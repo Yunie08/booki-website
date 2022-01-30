@@ -15,7 +15,7 @@ Site URL: [Booki website](https://yunie08.github.io/booki-website/)
 
 ### Screenshots
 
-![Booki website Screenshot](./images/screenshots/website-screenshot.png)
+![Booki website Screenshot](./images/website-screenshot.png)
 
 
 ### Built with
